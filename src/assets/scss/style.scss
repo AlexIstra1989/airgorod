@@ -1,6 +1,3 @@
-body {
-    background-color: rgb(37, 37, 37);
-    color: white;
-}
-
-@import './style2.scss'
+@import "base/mixins";
+@import "base/vars";
+@import "base/null";
