@@ -1,35 +1,135 @@
 .header {
  background-color: rgb(13, 255, 0);
+ height: rem(70);
  // .header__inner
  &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
  }
  // .header__logo
  &__logo {
- }
- // .header__menu
- &__menu {
+  margin-right: 20px;
+  z-index: 10;
  }
  // .header__link
  &__link {
+  padding: 15px 30px;
+  border: 1px solid $mainColor;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+  border-radius: 58px;
+  background-color: transparent;
+  @media (max-width: 600px) {
+   display: none;
+  }
  }
  // .header__btn
  &__btn {
+  display: none;
+  @media (max-width: 840px) {
+   display: block;
+   position: relative;
+   width: 30px;
+   height: 18px;
+   cursor: pointer;
+   z-index: 5;
+   span,
+   &::before,
+   &::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $mainColor;
+   }
+   &::before {
+    top: 0;
+   }
+   &::after {
+    bottom: 0;
+   }
+   span {
+    top: calc(50% - 1px);
+   }
+   .menu-open & {
+    span {
+     width: 0;
+    }
+    &::before,
+    &::after {
+    }
+    &::before {
+     top: calc(50% - 1px);
+     transform: rotate(-45deg);
+    }
+    &::after {
+     bottom: calc(50% - 1px);
+     transform: rotate(45deg);
+    }
+   }
+  }
  }
 }
-.container {
-}
-.logo {
+.header__btn.header__btn_active {
+ span {
+  width: 0;
+ }
+ &::before,
+ &::after {
+ }
+ &::before {
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+ }
+ &::after {
+  bottom: calc(50% - 1px);
+  transform: rotate(45deg);
+ }
 }
 //======================================================
 .menu {
+ @media (max-width: 840px) {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: #20333F;
+  padding: 150px 15px 50px 15px ;
+  z-index: 4;
+  transition: top 0.8s;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+   &_active {
+    left: 20%;
+   }
+ }
  // .menu__list
  &__list {
- }
- // .menu__item
- &__item {
- 
+  display: flex;
+  gap: 60px;
+  margin-right: 20px;
+  @media (max-width: 991px) {
+   gap: 40px;
+  }
+  @media (max-width: 840px) {
+   flex-direction: column;
+   align-items: center;
+  }
  }
  // .menu__link
  &__link {
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.7s;
+  &:hover {
+   border-color: $mainColor;
+  }
  }
 }
