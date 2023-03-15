@@ -10,7 +10,7 @@
  height: 72px;
  transition: background-color 0.5s ease;
  &.scrolled {
-  background-color: #20333F;
+  background-color: $bgColor;
  }
  // .header__inner
  &__inner {
