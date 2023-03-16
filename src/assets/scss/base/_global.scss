@@ -27,6 +27,10 @@ body {
 	}
 }
 
+.page {
+ background-color: $bgColor;
+}
+
 ._anim-show {
  transform: translate(0px, 100%);
  opacity: 0;
@@ -36,4 +40,11 @@ body {
 ._active ._anim-show {
  opacity: 1;
  transform: translate(0px, 0px);
+}
+
+.title {
+ font-weight: 500;
+ font-size: 40px;
+ line-height: 1.2;
+ text-shadow: 2px 0px 0px rgba(253, 147, 43, 0.4), -2px 0px 0px rgba(0, 176, 188, 0.4);
 }
