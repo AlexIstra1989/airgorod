@@ -15,6 +15,45 @@ window.addEventListener('scroll', function() {
   }
 });
 
+//Slider 
+new Swiper ('.reviews__slider', {
+ slidesPerView: 3.5,
+ autoHeight: true,
+ spaceBetween: 30,
+ loop: true,
+ //initialSlide: 1,
+
+ 
+ navigation: {
+  prevEl: '.swiper-button-prev',
+  nextEl: '.swiper-button-next',
+ },
+
+ // Брейкпоинты
+		
+			breakpoints: {
+    320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				490: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2.4,
+					spaceBetween: 20,
+				},
+				991: {
+					slidesPerView: 3.5,
+					spaceBetween: 30,
+				},
+			},
+			
+});
+
 //Анимация
 const animItems = document.querySelectorAll('._anim-items');
 
@@ -51,5 +90,4 @@ if (animItems.length > 0) {
  setTimeout (() => {
   animOnScroll();
  }, 400);
- 
 };
