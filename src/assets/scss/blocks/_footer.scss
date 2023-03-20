@@ -1,0 +1,135 @@
+.footer {
+ padding-bottom: 35px;
+ margin-top: -5px;
+ // .footer__top
+ &__top {
+  border-bottom: 1px solid #157E8D;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+ }
+ // .footer__inner
+ &__inner {
+  display: flex;
+  margin-bottom: 45px;
+  @media (max-width: 768px) {
+   flex-direction: column;
+   gap: 30px;
+  }
+ }
+ // .footer__menus
+ &__menus {
+  display: flex;
+  flex: 0 1 57.33%;
+  margin-left: auto;
+  gap: 100px;
+  @media (max-width: 768px) {
+   margin-left: inherit;
+  }
+  @media (max-width: 420px) {
+   flex-direction: column;
+   gap: 30px;
+  }
+ }
+ // .footer__menu
+ &__menu {
+  display: flex;
+  flex: 0 1 44%;
+ }
+ // .footer__list
+ &__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+ }
+ // .footer__link
+ &__link {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.7s; 
+  &:hover {
+   border-color: $mainColor;
+  }
+ }
+ // .footer__bottom
+ &__bottom {
+  display: flex;
+  justify-content: space-between;
+  color: $footerColor;
+  @media (max-width: 768px) {
+   flex-direction: column;
+   gap: 30px;
+  }
+ }
+ // .footer__rights
+ &__rights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 0 1 39.41%;
+ }
+ // .footer__privacy,
+ // .footer__author
+ &__privacy,
+ &__author {
+  font-size: 11px;
+  line-height: 1.4;
+  border-bottom: 1px solid $footerColor;
+  max-width: max-content;
+ }
+ // .footer__box
+ &__box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 0 1 47%;
+ }
+ // .footer__text
+ &__text {
+  font-size: 11px;
+  line-height: 1.2;
+ }
+ // .footer__copyright
+ &__copyright {
+  font-size: 11px;
+  line-height: 1.2;
+ }
+}
+//============================================================================
+.contacts {
+ flex: 0 1 24.14%;
+ // .contacts__phone
+ &__phone {
+  color: $footerColor;
+  margin-bottom: 16px;
+ }
+ // .contacts__phone-link
+ &__phone-link {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $mainColor;
+ }
+ // .contacts__messanger
+ &__messanger {
+  font-weight: 300;
+  line-height: 1.2;
+  color: $footerColor;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $footerColor;
+ }
+ // .contacts__email
+ &__email {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 1.2;
+ }
+}
+//==============================================================================
+.social {
+ display: flex;
+ gap: 20px;
+}
