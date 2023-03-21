@@ -91,3 +91,46 @@ if (animItems.length > 0) {
   animOnScroll();
  }, 400);
 };
+
+//popup
+const openButton = document.getElementById('openPopup');
+const closeButton = document.getElementById('closePopup');
+const overlay = document.getElementById('overlay');
+const popup = document.getElementById('popup');
+const form = document.getElementById('popupForm');
+const modal = document.getElementById('modal');
+const okButton = document.getElementById('okBtn');
+
+// Функция открытия попапа
+function openPopup() {
+ overlay.style.display = 'block';
+ popup.style.display = 'block';
+}
+
+// Функция закрытия попапа
+function closePopup() {
+ overlay.style.display = 'none';
+ popup.style.display = 'none';
+}
+
+// Функция открытия модального окна
+function openModal() {
+ overlay.style.display = 'block';
+ modal.style.display = 'block';
+ }
+ 
+ // Функция закрытия модального окна
+ function closeModal() {
+  overlay.style.display = 'none';
+  modal.style.display = 'none';
+ }
+
+// Назначаем обработчики событий на кнопки
+openButton.addEventListener('click', openPopup);
+closeButton.addEventListener('click', closePopup);
+form.addEventListener('submit', function(event) {
+ event.preventDefault();
+ closePopup();
+ openModal();
+ });
+ okButton.addEventListener('click', closeModal);

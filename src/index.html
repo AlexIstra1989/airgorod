@@ -37,11 +37,31 @@
        </li>
       </ul>
      </nav>
-     <a class="header__link" href="#">Заказать ролик</a>
+     <a id="openPopup" class="header__link" href="#">Заказать ролик</a>
      <button class="header__btn" type="button"><span></span></button>
     </div>
    </div>
   </header>
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+   <form class="popup__form"  id="popupForm">
+    <button class="popup__close-btn" id="closePopup">Закрыть</button>
+    <h2 class="popup__title">Заказать видеоролик</h2>
+    <input class="popup__field" type="text" placeholder="Имя" required>
+    <input class="popup__field" type="tel" placeholder="Телефон" required>
+    <textarea class="popup__entry" id="message" name="message" required placeholder="Пара слов о вашем проекте"></textarea>
+    <p class="popup__privacy">
+     Нажимая на кнопку, я соглашаюсь на обработку <span>персональных данных и с правилами пользования Платформой</span>
+    </p>
+    <button class="popup__btn" type="submit" id="submitBtn">Отправить</button>
+   </form>
+  </div>
+  <div class="modal" id="modal">
+   <p class="modal__text">
+    Отлично! Мы свяжемся с вами в ближайшее время, чтобы обсудить проект.
+   </p>
+   <button class="modal__ok-btn" id="okBtn">Оk</button>
+  </div>
   <main class="page">
    <section class="heading">
     <div class="container">
