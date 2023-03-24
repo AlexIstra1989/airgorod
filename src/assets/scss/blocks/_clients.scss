@@ -1,10 +1,22 @@
 .clients {
  padding-bottom: 120px;
+ position: relative;
  @media (max-width: 991px) {
   padding-bottom: 90px;
  }
  @media (max-width: 768px) {
   padding-bottom: 50px;
+ }
+ &::before {
+  @include pseudo;
+  background-image: url("../images/clients/pseudo.png");
+  background-repeat: no-repeat;
+  background-size: 88%;
+  background-position: center;
+  width: 1645px;
+  height: 1300px;
+  right: -14%;
+  top: -65%;
  }
  // .clients__top
  &__top {

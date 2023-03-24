@@ -39,6 +39,28 @@
    flex-direction: column-reverse;
    max-width: 100%;
   }
+  &:first-child {
+   position: relative;
+   &::before {
+    @include pseudo;
+    background-image: url("../images/services/pseudo.png");
+    width: 320px;
+    height: 210px;
+    left: -25%;
+    top: -5%;
+   }
+  } 
+  &:last-child {
+   position: relative;
+   &::before {
+    @include pseudo;
+    background-image: url("../images/services/pseudo.png");
+    width: 320px;
+    height: 210px;
+    right: 10%;
+    bottom: -35%;
+   }
+  } 
  }
  // .services__content
  &__content {
